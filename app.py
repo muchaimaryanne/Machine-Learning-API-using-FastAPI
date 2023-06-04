@@ -7,8 +7,12 @@ import pickle
 import pandas as pd
 # 2. Create the app object
 app = FastAPI()
-pickle_in = open("pipeline.pkl","rb")
-classifier=pickle.load(pickle_in)
+with open('pipeline.pkl', 'rb') as file:
+    classifier_dict = pickle.load(file)
+
+# Extract the classifier from the dictionary
+classifier = classifier_dict['model']
+#classifier=pickle.load(pickle_in)
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
@@ -26,20 +30,22 @@ def get_name(name: str):
 @app.post('/predict')
 def predict_sepssis(data:Sepsis):
     data = data.dict()
-    PRG=data['PRG']
-    PL=data['PL']
-    PR=data['PR']
-    SK=data['SK']
-    TS=data['TS']
-    M11=data['M11']
-    BD2=data['BD2']
+    Plasmaglucose=data['Plasmaglucose']
+    BloodWorkResult1=data['BloodWorkResult1']
+    BloodPressure=data['BloodPressure']
+    BloodWorkResult2=data['BloodWorkResult2']
+    BloodWorkResult3=data['BloodWorkResult3']
+    Bodymassindex =data['Bodymassindex']
+    BloodWorkResult4=data['BloodWorkResult4']
     Age=data['Age']
-    Insurance=data['Insurance']
+    
      
     
     
    # print(classifier.predict([[variance,skewness,curtosis,entropy]]))
-    prediction = classifier.predict([[PRG,PL,PR,SK,TS,M11,BD2,Age,Insurance]])
+   # Extract the classifier from the dictionary
+    
+    prediction = classifier.predict([[Plasmaglucose,BloodWorkResult1,BloodPressure,BloodWorkResult2,BloodWorkResult3,Bodymassindex,BloodWorkResult4,Age]])
     if(prediction[0]>0.5):
         prediction="Sepssis present"
     else:

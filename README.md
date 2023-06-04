@@ -149,11 +149,15 @@ By providing this predictive model and API, we aim to support healthcare profess
 ![ScreenShot1](assets/snip1.PNG)
 First screenshot of the interface.
 
-![ScreenShot2](assets/snip2.PNG)
+![ScreenShot3](assets/snip2.PNG)
 Second screenshot of the interface.
 
-![ScreenShot2](assets/snip3.PNG)
+![ScreenShot3](assets/snip3.PNG)
 Third screenshot of the interface.
+
+![ScreenShot4](assets/snip4.PNG)
+Fourth screenshot of the interface.
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
