@@ -211,6 +211,8 @@ Don't forget to give the project a star! Thanks again!
 Your Name - [@twitter_handle](https://twitter.com/muchaimaryanne) 
 
 Project Link: [Github] (https://github.com/muchaimaryanne/Machine-Learning-API-using-FastAPI)
+Article Link: [Medium] ([https://github.com/muchaimaryanne/Machine-Learning-API-using-FastAPI](https://medium.com/@muchaimaryanne/predicting-sepsis-risk-with-decision-tree-regression-building-an-interactive-api-with-fastapi-cb6a80807fd4))
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
